@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        Ann Karanja
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style2.css' %}"> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+    <nav>        
+    <div class="sidebar">
+
+      <!-- Logo / Name -->
+      <div class="logo">
+        <h1><span style="color: #0ff;">A</span>nn Karanja</h1>    
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/skills">My Skills</a></li>
+          <li><a href="/projects">Projects</a></li>          
+          <li><a href="/contacts">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Icons at Bottom -->
+      <div class="social-icons">
+        <a href="https://wa.me/25471157397?text=Hi%20Anne!" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ann-karanja-278a3a355" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Annie-815" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:karanjaann815@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+    <main>
+        {% block content %}
+        {% endblock  %}
+    </main> 
+</body>
+</html>

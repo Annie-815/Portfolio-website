@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Skills - Ann Karanja{% endblock %}
+
+{% block content %}
+<main class="skills-section">
+  <div class="container">
+    <h1 class="section-title">My Skills</h1>
+
+    <div class="skills-grid">
+
+      <!-- Data Science -->
+      <div class="skill-card">
+        <h2 class="skill-title">🧠 Data Science</h2>
+        <ul class="skill-list two-columns">
+          <li>Pandas, NumPy</li>
+          <li>Statistical Analysis</li>
+          <li>Matplotlib, Seaborn</li>
+          <li>Plotly, Dash</li>
+          <li>Scikit-learn, Keras</li>
+          <li>Neural Networks</li>
+          <li>NLP (spaCy, NLTK)</li>
+          <li>Apache Spark</li>
+          <li>Model Deployment</li>
+          <li>BeautifulSoup, APIs</li>
+        </ul>
+      </div>
+
+      <!-- Backend Dev -->
+      <div class="skill-card">
+        <h2 class="skill-title">💻 Backend Development</h2>
+        <ul class="skill-list two-columns">
+          <li>Python, Django</li>
+          <li>Flask, FastAPI</li>
+          <li>Node.js, Express</li>
+          <li>REST, GraphQL</li>
+          <li>PostgreSQL, MongoDB</li>
+          <li>Auth (JWT, OAuth2)</li>
+          <li>Docker, Compose</li>
+          <li>CI/CD (GitHub)</li>
+          <li>Testing, Postman</li>
+          <li>Git, GitHub</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="{% static 'js/skills.js' %}"></script>
+{% endblock %}

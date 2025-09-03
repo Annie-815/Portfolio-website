@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}About - Ann Karanja{% endblock %}
+
+{% block content %}
+<main class="about-wrapper">
+  <div class="about-box">
+    <h1 class="section-title">About Me</h1>
+
+    <div class="about-content">
+      {% comment %} <img src="{% static 'images/profile.jpg' %}" alt="Ann Karanja" class="about-image" /> {% endcomment %}
+
+      <div class="about-text">
+        <p>Hello! I'm <strong>Ann Karanja</strong>, a passionate <span class="highlight">Python developer</span> and <span class="highlight">data science enthusiast</span>.</p>
+
+        <p>I love building elegant backend systems and transforming raw data into real insights.</p>
+
+        <div class="typing-box">
+          <span id="typed-about"></span>
+        </div>
+
+        <a href="{% url 'contacts:hire_me' %}" class="button">Work with me</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="{% static 'js/about.js' %}"></script>
+
+
+<script src="{% static 'js/about.js' %}"></script>
+{% endblock %}

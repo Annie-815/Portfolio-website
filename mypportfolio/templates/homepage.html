@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block  title %}
+   Home - Ann Karanja
+{% endblock  %}
+
+{% block content %}   
+    <section>
+      <div class="intro">      
+        <h1>Hi, I’m <span>Ann Karanja</span>,<br>Python developer</h1>
+        <h2><span id="typing"></span></h2>
+        <p>Back End Developer / Data scientist</p>
+        <a href="{% url 'contacts:hire_me' %}">Hire me!</a>
+      </div>
+      <div class="bg-line"></div>
+    </section>
+     <script src="{% static 'js/script.js' %}"></script>
+{% endblock  %}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hire Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hire-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #00b894;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #019875;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="hire-container">
+    <h2>Hire Me</h2>
+
+    <form action="/hire" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <label for="service">Choose a Service:</label>
+      <select name="service" id="service" required>
+        <option value="">-- Select a service --</option>
+        <option value="web">Website Design/Development</option>
+        <option value="data">Data Analysis / Data Science</option>
+        <option value="ai">AI Automation / Agents</option>
+        <option value="consult">Tech Consultation</option>
+      </select>
+
+      <label for="project">Describe Your Project:</label>
+      <textarea name="project" id="project" placeholder="Tell me about your project..." required></textarea>
+
+      <button type="submit" id="submit button">Submit Request</button>
+    </form>
+</div>
+<script src="{% static 'js/hire.js' %}"></script>
+</body>
+</html>
